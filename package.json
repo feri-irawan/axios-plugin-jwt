@@ -1,6 +1,6 @@
 {
   "name": "axios-plugin-jwt",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Axios plugin for JWT authentication with refresh token using interceptor",
   "type": "module",
   "module": "./dist/index.js",
