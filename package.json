@@ -1,7 +1,24 @@
 {
   "name": "axios-plugin-jwt",
-  "module": "src/index.ts",
+  "version": "1.0.0",
+  "description": "Axios plugin for JWT authentication with refresh token using interceptor",
   "type": "module",
+  "module": "./dist/index.js",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    "import": "./dist/index.js",
+    "require": "./dist/index.js",
+    "types": "./dist/index.d.ts"
+  },
+  "scripts": {
+    "prebuild": "bun install && rm -rf dist",
+    "build": "tsc",
+    "prepublish": "bun prebuild && bun build"
+  },
   "devDependencies": {
     "@types/bun": "latest"
   },
@@ -10,5 +27,13 @@
   },
   "dependencies": {
     "axios": "^1.8.4"
-  }
+  },
+  "author": "feri-irawan",
+  "license": "MIT",
+  "keywords": [
+    "axios",
+    "jwt",
+    "refresh-token",
+    "interceptor"
+  ]
 }
